@@ -1,0 +1,526 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pagination .page-link {
+  border: none;
+  margin: 0 4px;
+  border-radius: 8px;
+  color: #2563eb;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.pagination .page-link:hover {
+  background: #e0e7ff;
+}
+
+.pagination .active .page-link {
+  background: #2563eb;
+  color: white;
+}
+
+.pagination .disabled .page-link {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* --- Action icons (View / Edit / Delete) --- */
+.table .btn-link {
+  text-decoration: none;
+  color: #6b7280;
+  /* gray like the screenshot */
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+/* Hover color per action */
+.table .btn-link.view:hover {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+/* blue   */
+.table .btn-link.edit:hover {
+  color: #f97316;
+  background: #fff7ed;
+}
+
+/* orange */
+.table .btn-link.delete:hover {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+/* red    */
+
+/* Remove the default focus ring that btn-link adds */
+.table .btn-link:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+
+body {
+  background-color: #f1f5f9;
+  /* light grey */
+}
+
+/* Home only */
+.home-page { background: #f1f5f9; min-height: 100vh; padding: 20px; }
+
+/* Dashboard only */
+.dashboard-page { background: #eef2ff; min-height: 100vh; padding: 20px; }
+
+.home-card {
+    background: #f1f5f9;      /* light grey */
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+
+.btn-blue {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+}
+.btn-blue:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.dashboard-page {
+  background: #f1f5f9;   /* light grey */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+html, body, #root {
+  background-color: #f1f5f9 !important;
+  min-height: 100vh;
+}
+.page-header {
+  background: #ffffff;
+  padding: 18px 24px;
+  border-radius: 14px;
+  border-left: 5px solid #2563eb;   /* blue accent bar */
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.page-eyebrow {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2a5fad;          /* orange like the screenshot */
+  margin-bottom: 6px;
+}
+
+.page-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.app-navbar {
+    min-height: 64px;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-container {
+    min-height: 64px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+/* Menu button */
+.menu-button {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+
+    color: white;
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.menu-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.app-brand {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    max-width: calc(100% - 180px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================
+   DESKTOP ACTIONS
+========================= */
+
+.desktop-actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-action {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+
+    color: white;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: background 0.2s ease;
+}
+
+.nav-action:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   LAYOUT: sidebar pushes content
+========================= */
+
+:root { --sidebar-width: 330px; }
+
+html, body { overflow-x: hidden; }
+
+.main-content {
+    margin-left: 0;
+    min-width: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.app-navbar {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+body.sidebar-is-open .main-content,
+body.sidebar-is-open .app-navbar {
+    margin-left: var(--sidebar-width);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100dvh;
+    background: #fff;
+    z-index: 1100;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s;
+    box-shadow: 2px 0 8px rgba(15, 23, 42, 0.08);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    text-align: left;
+}
+
+.sidebar-open {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.sidebar-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 16px;
+    background: #0d6efd;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar-close:hover { background: rgba(255, 255, 255, 0.15); }
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 6px;
+}
+
+.sidebar-link {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover { background: #e0e7ff; color: #1d4ed8; }
+
+.sidebar-link.active,
+.sidebar-link.active:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* =========================
+   USERS CARD
+========================= */
+
+.users-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+    padding: 20px;
+    text-align: left;
+}
+
+.users-search { width: 100%; max-width: 360px; }
+
+.users-card .table thead th { white-space: nowrap; }
+
+/* =========================
+   MODAL (Add / Edit user)
+========================= */
+
+.app-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.app-modal {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+.app-modal form {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.app-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.app-modal-close {
+    border: 0;
+    background: transparent;
+    color: #64748b;
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-modal-close:hover { background: #f1f5f9; }
+
+.app-modal-body {
+    padding: 20px 24px;
+    overflow-y: auto;
+}
+
+.app-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 14px 24px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* =========================
+   TABLET / LAPTOP: sidebar floats (no dark overlay)
+========================= */
+
+@media (max-width: 991.98px) {
+    body.sidebar-is-open .main-content,
+    body.sidebar-is-open .app-navbar {
+        margin-left: 0;
+    }
+
+    .sidebar { box-shadow: 4px 0 18px rgba(0, 0, 0, 0.18); }
+}
+
+@media (max-width: 768px) {
+    .navbar-container { padding: 0 12px; }
+    .app-brand { font-size: 17px; max-width: calc(100% - 110px); }
+    .desktop-actions { display: none; }
+    .users-card { padding: 14px; }
+}
+
+@media (max-width: 480px) {
+    .app-navbar, .navbar-container { min-height: 58px; }
+    .navbar-container { padding: 0 10px; }
+    .menu-button { width: 40px; height: 40px; }
+    .app-brand { font-size: 15px; max-width: calc(100% - 75px); }
+    .sidebar { width: min(var(--sidebar-width), 85vw); }
+    .app-modal-body, .app-modal-header, .app-modal-footer { padding-left: 16px; padding-right: 16px; }
+    .page-title { font-size: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar, .main-content, .app-navbar, .sidebar-link, .nav-action { transition: none; }
+}
+
+.sidebar-link.logout { color: #dc3545; }
+.sidebar-link.logout:hover { background: #fdecea; color: #b02a37; }
+.auth-card {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    box-sizing: border-box;
+}
+.auth-card input,
+.auth-card .form-control {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.auth-card .row > div {
+    min-width: 0;
+}
