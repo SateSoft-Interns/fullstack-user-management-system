@@ -189,7 +189,7 @@ export default function Home() {
                 <div className="page-header d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
                     <div className="text-start">
                         <span className="page-eyebrow">Clients</span>
-                        <h2 className="page-title">Client Management</h2>
+                        <h2 className="page-title">Client_Management</h2>
                     </div>
                     <button
                         type="button"
