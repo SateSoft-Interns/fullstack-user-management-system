@@ -1,5 +1,5 @@
 package com.usama.internProject.model;
-
+import jakarta.persistence.GenerationType;
 import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -18,10 +18,9 @@ import jakarta.persistence.Table;
 })
 public class clsUser {
 
-    @Id
-    @GeneratedValue()
-    private Long id;
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
     private String username;
     private String name;
     private String email;

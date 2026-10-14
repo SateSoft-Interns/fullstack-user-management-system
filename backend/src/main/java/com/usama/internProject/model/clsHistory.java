@@ -1,5 +1,5 @@
 package com.usama.internProject.model;
-
+import jakarta.persistence.GenerationType;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
 public class clsHistory {
 
 	@Id
-	@GeneratedValue()
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	private long originalId;
